@@ -21,6 +21,7 @@ import path from 'node:path'
 import url from 'node:url'
 import zodToJsonSchema from 'zod-to-json-schema'
 
+import batchSequenceTools from '../lib/tools/batch-sequence.js';
 import commonTools from '../lib/tools/common.js';
 import consoleTools from '../lib/tools/console.js';
 import dialogsTools from '../lib/tools/dialogs.js';
@@ -58,6 +59,7 @@ const categories = {
   'Utilities': [
     ...installTools,
     ...commonTools(true),
+    ...batchSequenceTools,
   ],
   'Tabs': [
     ...tabsTools(true),

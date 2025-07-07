@@ -636,6 +636,16 @@ X Y coordinate space, based on the provided screenshot.
     - `height` (number): Height of the browser window
   - Read-only: **true**
 
+<!-- NOTE: This has been generated via update-readme.js -->
+
+- **browser_batch_execute**
+  - Title: Execute Tool Sequence
+  - Description: Executes a sequence of any available Playwright MCP tools in a single, atomic operation. This is the preferred method for any task requiring two or more sequential actions, as it significantly reduces latency and improves reliability compared to calling individual tools one by one. The tool will continue executing steps even if one fails (partial success mode) and will always automatically capture a final snapshot of the page after the entire sequence is complete, allowing for immediate state verification.
+  - Parameters:
+    - `operations` (array): Sequence of tool operations to execute (1-20 operations)
+    - `continueOnError` (boolean, optional): Continue executing remaining operations if one fails (partial success mode)
+  - Read-only: **false**
+
 </details>
 
 <details>
