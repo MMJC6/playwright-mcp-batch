@@ -1,4 +1,4 @@
-## Playwright MCP
+## Playwright MCP Batch
 
 A Model Context Protocol (MCP) server that provides browser automation capabilities using [Playwright](https://playwright.dev). This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models.
 
@@ -7,6 +7,7 @@ A Model Context Protocol (MCP) server that provides browser automation capabilit
 - **Fast and lightweight**. Uses Playwright's accessibility tree, not pixel-based input.
 - **LLM-friendly**. No vision models needed, operates purely on structured data.
 - **Deterministic tool application**. Avoids ambiguity common with screenshot-based approaches.
+- ** Batch Actions ** browser_batch_execute could Execute Tool Sequence , fill many fields at once or other actions like click a button , wait 1s , get the screen info.
 
 ### Requirements
 - Node.js 18 or newer
@@ -27,7 +28,7 @@ First, install the Playwright MCP server with your client. A typical configurati
     "playwright": {
       "command": "npx",
       "args": [
-        "@playwright/mcp@latest"
+        "playwright-mcp-batch"
       ]
     }
   }
